@@ -1,15 +1,10 @@
 # A bluetooth controlled, skid-steer robot. In MicroPython.
+# Mark Goodwin. 2013 - 2024
 from machine import Pin,UART,PWM,Timer
 
-# Outputs: Motor outputs; PWM on pins 0,1,2,3
-LF = PWM(Pin(1))
-LR = PWM(Pin(0))
-RF = PWM(Pin(2))
-RR = PWM(Pin(3))
-
-# Connectivity: Set up UART 1 (pins 4 and 5) at 9600 baud, 8n1
-uart = UART(1, baudrate=9600, tx=Pin(4), rx=Pin(5))
-uart.init(bits=8, parity=None, stop=1)
+# Connectivity: Set up UART 1, GPIO pins 4 and 5 (physical pins 6 and 7)
+uart = UART(1, baudrate=9600, tx=Pin(4), rx=Pin(5)) # 9600 baud
+uart.init(bits=8, parity=None, stop=1) # 8n1
 
 # Move the motor attached to the specified PWM Pins
 def move_motor(speed, forward_pin, reverse_pin):
@@ -20,6 +15,15 @@ def move_motor(speed, forward_pin, reverse_pin):
     else:
         forward_pin.duty_u16(0)
         reverse_pin.duty_u16(abs(speed))
+
+# Outputs: Motor outputs; PWM on pins 0,1,2,3
+LF = PWM(Pin(0)) # GPIO pin 0, physical pin 1
+LR = PWM(Pin(1)) # GPIO pin 1, physical pin 2
+RF = PWM(Pin(2)) # GPIO pin 2, physical pin 4
+RR = PWM(Pin(3)) # GPIO pin 3, physical pin 5
+
+# Set the frequencies for all PWM pins
+[pin.freq(1000) for pin in (LF,LR,RF,RR)]
 
 # Ensure the motors are *off* to start with (this is
 # really helpful to ensure misbehaving controllers are
