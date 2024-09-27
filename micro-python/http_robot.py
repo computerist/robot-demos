@@ -106,6 +106,22 @@ def move(request, response):
         print('xs = %d, ys = %d' % (xs, ys))
         move_from_coords(xs, ys)
     response.write('')
+    
+def stop(request, response):
+    motors_off()
+    response.write('')
 
+def make_document_handler(path, mimetype='text/html'):
+    document = open(path,'r').read()
+    def serve_document(request, response):
+        response.set_header("Content-type", mimetype)
+        response.write(document)
+    return serve_document
+        
+
+HttpServer.add_route('/stop', stop)
 HttpServer.add_route('/move', move)
+HttpServer.add_route('/', make_document_handler('robot.html'))
+HttpServer.add_route('/robot.js', make_document_handler('robot.js', mimetype="text/javascript"))
+HttpServer.add_route('/robot.css', make_document_handler('robot.css', mimetype="text/css"))
 HttpServer.run_server()
