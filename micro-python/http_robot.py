@@ -3,7 +3,7 @@
 from machine import Pin, UART, PWM, Timer
 import time
 
-import HttpServer
+import http_server
 
 import json
 
@@ -88,22 +88,17 @@ def stop_idle(timer):
     if time.ticks_diff(time.ticks_ms(), last_received) > 500:
         #last_received = time.ticks_ms()
         motors_off()
-    else:
-        print("wait")
                 
 # Create a periodic timer at 4Hz, calling stop_idle
 stopTimer = Timer()
 stopTimer.init(freq=2, mode=Timer.PERIODIC, callback=stop_idle)
 
 #TODO: add a timer to turn the motors off on idle
-
-html = open('template.html','r').read()
     
 def move(request, response):
     if len(request.body) > 0:
         move_obj = json.loads(request.body)
         xs, ys = move_obj['xs'], move_obj['ys']
-        print('xs = %d, ys = %d' % (xs, ys))
         move_from_coords(xs, ys)
     response.write('')
     
@@ -119,9 +114,9 @@ def make_document_handler(path, mimetype='text/html'):
     return serve_document
         
 
-HttpServer.add_route('/stop', stop)
-HttpServer.add_route('/move', move)
-HttpServer.add_route('/', make_document_handler('robot.html'))
-HttpServer.add_route('/robot.js', make_document_handler('robot.js', mimetype="text/javascript"))
-HttpServer.add_route('/robot.css', make_document_handler('robot.css', mimetype="text/css"))
-HttpServer.run_server()
+http_server.add_route('/stop', stop)
+http_server.add_route('/move', move)
+http_server.add_route('/', make_document_handler('robot.html'))
+http_server.add_route('/robot.js', make_document_handler('robot.js', mimetype="text/javascript"))
+http_server.add_route('/robot.css', make_document_handler('robot.css', mimetype="text/css"))
+http_server.run_server()

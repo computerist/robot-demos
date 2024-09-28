@@ -5,7 +5,7 @@ These instructions assume micro-python on a Pi Pico. Most demos will work on the
 This uses the onboard wifi capabilities of the Pico W. To run this:
 - Copy the files to the device. You will need:
   - `http_robot.py` - this is the code that drives the actual robot; interfaces with the Pico GPIOs, etc.
-  - `HttpServer.py` - this is a really simple webserver implementation I wrote so that `http_robot.py` can do its thing.
+  - `http_server.py` - this is a really simple webserver implementation I wrote so that `http_robot.py` can do its thing.
   - `robot.css`, `robot.html` and `robot.css` - These are the web front-end for the robot. It handles user touches (or mouse input) and turns them into messages that are sent to the webserver.
   - `wifi.txt` - this will need editing for your network; the first line should contain the wireless network SSID, the second, the network passphrase
 - Make sure you've edited that `wifi.txt` to suit your network.
