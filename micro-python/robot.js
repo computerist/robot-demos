@@ -3,7 +3,7 @@ var last_position = {
     x: 255,
     y: 255
 };
-var interval = 1000;
+var interval = 500;
 
 function handle_click(evt) {
     create_request(evt.layerX, evt.layerY);
@@ -36,7 +36,7 @@ function create_request(x, y) {
     if (elapsed < interval) {
         dX = last_position.x - scaled_x;
         dY = last_position.y - scaled_y;
-        
+
         distance = Math.sqrt((dX * dX) + (dY * dY));
         
         document.body.innerHTML = distance;
