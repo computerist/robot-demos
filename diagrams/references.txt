@@ -1,0 +1,6 @@
+References for diagrams
+
+Breadboard (CC BY-SA): modified version of https://commons.wikimedia.org/wiki/File:Breadboard_full_plus.svg
+Pi Pico (CC BY-SA): https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html, specifically, https://datasheets.raspberrypi.com/pico/Pico-R3-A4-Pinout.pdf
+LED diagram (Public domain): https://commons.wikimedia.org/wiki/File:%2B-_of_LED_2.svg
+Pushbutton (): https://www.smashingmagazine.com/2020/01/recreating-arduino-pushbutton-svg/
