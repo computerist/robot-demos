@@ -24,13 +24,13 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.2912183"
-     inkscape:cx="223.04516"
-     inkscape:cy="261.76828"
+     inkscape:cx="218.39838"
+     inkscape:cy="263.3172"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="false" />
   <defs
@@ -11175,12 +11175,12 @@
        y="16.543497" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round"
-       d="m 60.300751,54.641018 c 0.01533,-5.655484 29.744132,-6.307866 30.173292,-1.001011"
+       d="M 60.300751,54.641018 C 60.316081,48.985534 197.00782,48.538062 197.43698,53.844917"
        id="path1"
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:round"
-       d="m 60.337244,48.698343 c 0.01533,-5.655484 23.738069,-6.164865 24.167229,-0.85801"
+       d="M 60.337244,48.698343 C 60.352574,43.042859 191.65297,41.918749 192.08213,47.225604"
        id="path2"
        sodipodi:nodetypes="cc" />
   </g>
