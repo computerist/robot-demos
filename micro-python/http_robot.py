@@ -9,9 +9,29 @@ import json
 
 led = Pin("LED", Pin.OUT, value=0)
 
-# Bluetooth: Set up UART 1, GPIO pins 4 and 5 (physical pins 6 and 7)
-uart = UART(1, baudrate=9600, tx=Pin(4), rx=Pin(5)) # 9600 baud
+# Bluetooth: Set up UART 0, GPIO pins 0 and 1 (physical pins 1 and 2)
+uart = UART(0, baudrate=9600, tx=Pin(0), rx=Pin(1)) # 9600 baud
 uart.init(bits=8, parity=None, stop=1) # 8n1
+
+# Outputs: Motor outputs; PWM on pins 2,3,4,5
+LF = PWM(Pin(2)) # GPIO pin 2, physical pin 4
+LR = PWM(Pin(3)) # GPIO pin 3, physical pin 5
+RF = PWM(Pin(4)) # GPIO pin 4, physical pin 6
+RR = PWM(Pin(5)) # GPIO pin 5, physical pin 7
+
+pin_map ={
+    "LF" : LF,
+    "LR" : LR,
+    "RF" : RF,
+    "RR" : RR,
+    }
+
+button = Pin(14, Pin.IN, Pin.PULL_DOWN)
+
+# Set the frequencies for all PWM pins
+[pin.freq(1000) for pin in (LF,LR,RF,RR)]
+
+last_received = 0
 
 # Move the motor attached to the specified PWM Pins
 def move_motor(speed, forward_pin, reverse_pin):
@@ -22,19 +42,6 @@ def move_motor(speed, forward_pin, reverse_pin):
     else:
         forward_pin.duty_u16(0)
         reverse_pin.duty_u16(abs(speed))
-
-# Outputs: Motor outputs; PWM on pins 0,1,2,3
-LF = PWM(Pin(0)) # GPIO pin 0, physical pin 1
-LR = PWM(Pin(1)) # GPIO pin 1, physical pin 2
-RF = PWM(Pin(2)) # GPIO pin 2, physical pin 4
-RR = PWM(Pin(3)) # GPIO pin 3, physical pin 5
-
-button = Pin(14, Pin.IN, Pin.PULL_DOWN)
-
-# Set the frequencies for all PWM pins
-[pin.freq(1000) for pin in (LF,LR,RF,RR)]
-
-last_received = 0
 
 def motors_off():
     move_motor(0, LF, LR)
@@ -60,8 +67,8 @@ def move_from_coords(xs, ys):
         else:
             throttle = ceiling
     # Calculate the left and right components for motor movement
-    left = throttle - steering
-    right = throttle + steering
+    left = throttle + steering
+    right = throttle - steering
     # Move the motors!
     move_motor(left, LF, LR)
     move_motor(right, RF, RR)
@@ -93,13 +100,25 @@ def stop_idle(timer):
 stopTimer = Timer()
 stopTimer.init(freq=2, mode=Timer.PERIODIC, callback=stop_idle)
 
-#TODO: add a timer to turn the motors off on idle
-    
 def move(request, response):
     if len(request.body) > 0:
         move_obj = json.loads(request.body)
         xs, ys = move_obj['xs'], move_obj['ys']
         move_from_coords(xs, ys)
+    response.write('')
+
+def test(request, response):
+    motors_off()
+    global last_received
+    last_received = time.ticks_ms()
+    if len(request.body) > 0:
+        move_obj = json.loads(request.body)
+        pin_name, speed = move_obj['pin'], move_obj['speed']
+        try:
+            pin = pin_map[pin_name]
+            pin.duty_u16(abs(speed))
+        except:
+            pass
     response.write('')
     
 def stop(request, response):
@@ -112,10 +131,10 @@ def make_document_handler(path, mimetype='text/html'):
         response.set_header("Content-type", mimetype)
         response.write(document)
     return serve_document
-        
 
 http_server.add_route('/stop', stop)
 http_server.add_route('/move', move)
+http_server.add_route('/test', test)
 http_server.add_route('/', make_document_handler('robot.html'))
 http_server.add_route('/robot.js', make_document_handler('robot.js', mimetype="text/javascript"))
 http_server.add_route('/robot.css', make_document_handler('robot.css', mimetype="text/css"))

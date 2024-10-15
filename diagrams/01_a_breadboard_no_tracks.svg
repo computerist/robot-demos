@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
-   sodipodi:docname="02_breadboard_no_tracks.svg"
+   sodipodi:docname="01_a_breadboard_no_tracks.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.92510738"
-     inkscape:cx="540.4778"
-     inkscape:cy="398.87262"
+     inkscape:cx="217.81255"
+     inkscape:cy="407.52026"
      inkscape:window-width="1792"
      inkscape:window-height="1067"
      inkscape:window-x="0"
@@ -10126,7 +10126,10 @@
     </g>
     <g
        id="g57"
-       transform="translate(-78.387047,-8.8528814)">
+       transform="translate(-78.387047,-8.8528814)"
+       inkscape:export-filename="presentation images/01a.png"
+       inkscape:export-xdpi="297.05945"
+       inkscape:export-ydpi="297.05945">
       <circle
          cy="-150.02164"
          r="0.99244905"

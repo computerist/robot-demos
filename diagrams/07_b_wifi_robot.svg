@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="125.36115mm"
-   height="192.29424mm"
-   viewBox="0 0 125.36115 192.29424"
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
@@ -23,10 +23,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.2912183"
-     inkscape:cx="218.39838"
-     inkscape:cy="263.3172"
-     inkscape:window-width="1920"
+     inkscape:zoom="0.7263316"
+     inkscape:cx="267.78403"
+     inkscape:cy="188.61908"
+     inkscape:window-width="1792"
      inkscape:window-height="1027"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -2440,22 +2440,22 @@
        inkscape:label="+5v_l" />
     <path
        style="fill:#000000;stroke:#800080;stroke-width:1;stroke-linecap:round"
-       d="m 108.18551,42.02044 23.69031,3.4e-4"
+       d="m 108.18551,53.662114 23.69031,3.4e-4"
        id="path612"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#000000;stroke:#0000ff;stroke-width:1;stroke-linecap:round"
-       d="m 108.18551,35.670436 23.69031,3.4e-4"
+       d="m 108.3143,47.69848 23.69031,3.4e-4"
        id="path613"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#000000;stroke:#008000;stroke-width:1;stroke-linecap:round"
-       d="m 108.18551,24.028762 23.69031,3.4e-4"
+       style="fill:#000000;stroke:#ff00ff;stroke-width:1;stroke-linecap:round"
+       d="m 108.18551,41.76286 23.69031,3.4e-4"
        id="path614"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#000000;stroke:#ffff00;stroke-width:1;stroke-linecap:round"
-       d="m 108.18551,17.678758 23.69031,3.4e-4"
+       d="m 108.18551,35.670436 23.69031,3.4e-4"
        id="path615"
        sodipodi:nodetypes="cc" />
   </g>
@@ -2463,7 +2463,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Breadboard hole shadows"
-     style="display:none"
+     style="display:inline"
      transform="translate(-78.387047,-8.8528814)">
     <path
        d="m 84.355832,27.872749 c 1.095259,0 1.984898,0.888809 1.984898,1.984898 0,1.096088 -0.88881,1.984898 -1.984898,1.984898"
@@ -8575,7 +8575,7 @@
        fill="#383838"
        id="circle69"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ffff00;stroke-width:0.829114" />
     <circle
        cy="-114.20393"
        r="0.99244905"
@@ -8583,7 +8583,7 @@
        fill="#383838"
        id="circle71"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ffff00;stroke-width:0.829114" />
     <circle
        cy="-120.17355"
        r="0.99244905"
@@ -8591,7 +8591,7 @@
        fill="#383838"
        id="circle73"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ffff00;stroke-width:0.829114" />
     <circle
        cy="-126.14316"
        r="0.99244905"
@@ -8599,7 +8599,7 @@
        fill="#383838"
        id="circle75"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ffff00;stroke-width:0.829114" />
     <circle
        cy="-132.11278"
        r="0.99161988"
@@ -8607,7 +8607,7 @@
        fill="#383838"
        id="circle77"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ffff00;stroke-width:0.829114" />
     <circle
        cy="-150.02164"
        r="0.99244905"
@@ -8655,7 +8655,7 @@
        fill="#383838"
        id="circle89"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ff00ff;stroke-width:0.829114" />
     <circle
        cy="-114.20393"
        r="0.99244905"
@@ -8663,7 +8663,7 @@
        fill="#383838"
        id="circle91"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ff00ff;stroke-width:0.829114" />
     <circle
        cy="-120.17355"
        r="0.99244905"
@@ -8671,7 +8671,7 @@
        fill="#383838"
        id="circle93"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ff00ff;stroke-width:0.829114" />
     <circle
        cy="-126.14316"
        r="0.99244905"
@@ -8679,7 +8679,7 @@
        fill="#383838"
        id="circle95"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ff00ff;stroke-width:0.829114" />
     <circle
        cy="-132.11278"
        r="0.99161988"
@@ -8687,7 +8687,7 @@
        fill="#383838"
        id="circle97"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#ff00ff;stroke-width:0.829114" />
     <circle
        cy="-150.02164"
        r="0.99244905"
@@ -8735,7 +8735,7 @@
        fill="#383838"
        id="circle109"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#0000ff;stroke-width:0.829114" />
     <circle
        cy="-114.20393"
        r="0.99244905"
@@ -8743,7 +8743,7 @@
        fill="#383838"
        id="circle111"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#0000ff;stroke-width:0.829114" />
     <circle
        cy="-120.17355"
        r="0.99244905"
@@ -8751,7 +8751,7 @@
        fill="#383838"
        id="circle113"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#0000ff;stroke-width:0.829114" />
     <circle
        cy="-126.14316"
        r="0.99244905"
@@ -8759,7 +8759,7 @@
        fill="#383838"
        id="circle115"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#0000ff;stroke-width:0.829114" />
     <circle
        cy="-132.11278"
        r="0.99161988"
@@ -8767,7 +8767,7 @@
        fill="#383838"
        id="circle117"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#0000ff;stroke-width:0.829114" />
     <circle
        cy="-150.02164"
        r="0.99244905"
@@ -8815,7 +8815,7 @@
        fill="#383838"
        id="circle129"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#800080;stroke-width:0.829114" />
     <circle
        cy="-114.20393"
        r="0.99244905"
@@ -8823,7 +8823,7 @@
        fill="#383838"
        id="circle131"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#800080;stroke-width:0.829114" />
     <circle
        cy="-120.17355"
        r="0.99244905"
@@ -8831,7 +8831,7 @@
        fill="#383838"
        id="circle133"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#800080;stroke-width:0.829114" />
     <circle
        cy="-126.14316"
        r="0.99244905"
@@ -8839,7 +8839,7 @@
        fill="#383838"
        id="circle135"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#800080;stroke-width:0.829114" />
     <circle
        cy="-132.11278"
        r="0.99161988"
@@ -8847,7 +8847,7 @@
        fill="#383838"
        id="circle137"
        transform="rotate(90)"
-       style="display:inline;fill:#808080;stroke-width:0.829114" />
+       style="display:inline;fill:#800080;stroke-width:0.829114" />
     <circle
        cy="-150.02164"
        r="0.99244905"
@@ -9614,8 +9614,7 @@
      id="layer5"
      inkscape:label="Pi Pico"
      style="display:inline"
-     transform="translate(-78.387046,-8.8528813)"
-     sodipodi:insensitive="true">
+     transform="translate(-78.387046,-8.8528813)">
     <g
        id="g5"
        transform="matrix(0.34536314,0,0,0.34536314,-52.467827,-73.228406)"
@@ -11143,22 +11142,22 @@
        sodipodi:insensitive="true" />
     <path
        style="display:inline;fill:none;stroke:#800080;stroke-width:1;stroke-linecap:round"
-       d="m 60.300751,42.470177 c 0.01533,-5.655484 47.619309,-6.164865 48.048469,-0.85801"
+       d="M 209.2886,84.7259 C 209.3039,79.070416 107.79127,48.33706 108.22043,53.643915"
        id="path4-4-1-3"
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;stroke:#0000ff;stroke-width:1;stroke-linecap:round"
-       d="m 60.337244,36.527502 c 0.01533,-5.655484 47.619306,-6.164865 48.048466,-0.85801"
+       d="M 209.32509,78.783225 C 209.34039,73.127741 107.82776,42.394385 108.25692,47.70124"
        id="path4-4-1-3-86"
        sodipodi:nodetypes="cc" />
     <path
-       style="display:inline;fill:none;stroke:#008000;stroke-width:1;stroke-linecap:round"
-       d="m 60.136305,30.950446 c 0.01533,-5.655484 47.619305,-12.514865 48.048465,-7.20801"
+       style="display:inline;fill:none;stroke:#ff00ff;stroke-width:1;stroke-linecap:round"
+       d="M 209.12415,73.206169 C 209.13945,67.550685 107.75561,36.649255 108.18477,41.95611"
        id="path4-4-1-3-2"
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;stroke:#ffff00;stroke-width:1;stroke-linecap:round"
-       d="M 60.074504,24.94948 C 60.089834,19.293996 107.6938,12.492553 108.12296,17.799408"
+       d="M 209.06235,67.205203 C 209.07765,61.549719 107.6938,30.706227 108.12296,36.013082"
        id="path4-4-1-3-2-9"
        sodipodi:nodetypes="cc" />
     <path
@@ -11171,16 +11170,16 @@
        id="rect9"
        width="30.009985"
        height="43.452118"
-       x="34.037792"
-       y="16.543497" />
+       x="207.06769"
+       y="45.321102" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round"
-       d="M 60.300751,54.641018 C 60.316081,48.985534 197.00782,48.538062 197.43698,53.844917"
+       d="m 210.38142,57.555206 c 0.0153,-5.655484 -13.00933,-7.924323 -12.58017,-2.617468"
        id="path1"
        sodipodi:nodetypes="cc" />
     <path
        style="display:inline;fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:round"
-       d="M 60.337244,48.698343 C 60.352574,43.042859 191.65297,41.918749 192.08213,47.225604"
+       d="m 210.41791,51.612531 c 0.0153,-5.655484 -18.40067,-8.600961 -17.97151,-3.294106"
        id="path2"
        sodipodi:nodetypes="cc" />
   </g>
