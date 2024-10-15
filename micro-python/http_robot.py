@@ -1,6 +1,6 @@
 # A bluetooth / HTTP controlled, skid-steer robot. In MicroPython.
 # Mark Goodwin. 2013 - 2024
-from machine import Pin, UART, PWM, Timer
+from machine import Pin, PWM, Timer
 import time
 
 import http_server
@@ -8,10 +8,6 @@ import http_server
 import json
 
 led = Pin("LED", Pin.OUT, value=0)
-
-# Bluetooth: Set up UART 0, GPIO pins 0 and 1 (physical pins 1 and 2)
-uart = UART(0, baudrate=9600, tx=Pin(0), rx=Pin(1)) # 9600 baud
-uart.init(bits=8, parity=None, stop=1) # 8n1
 
 # Outputs: Motor outputs; PWM on pins 2,3,4,5
 LF = PWM(Pin(2)) # GPIO pin 2, physical pin 4
@@ -72,22 +68,6 @@ def move_from_coords(xs, ys):
     # Move the motors!
     move_motor(left, LF, LR)
     move_motor(right, RF, RR)
-
-# Read data from the uart (run from a timer)
-def read_serial(timer):
-    if uart.any(): 
-        data = uart.read()
-        lines = [line.strip() for line in data.decode().split('\n')]
-        for line in lines:
-            if(len(line) > 0):
-                # for _reasons_, the phone app sends X,Y coordinates, 1 per line
-                # as UTF-8 strings. X and Y are values, nominally between 0 and 512
-                xs, ys = line.split(',')
-                move_from_coords(int(xs), int(ys))
-
-# Create a periodic timer at 25Hz, calling read_serial
-serialTimer = Timer()
-serialTimer.init(freq=25, mode=Timer.PERIODIC, callback=read_serial)
 
 # Stop the motors if there's no current data
 def stop_idle(timer):

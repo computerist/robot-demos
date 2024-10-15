@@ -38,6 +38,7 @@ def read_serial(timer):
         lines = [line.strip() for line in data.decode().split('\n')]
         for line in lines:
             if(len(line) > 0):
+                print(line)
                 # for _reasons_, the phone app sends X,Y coordinates, 1 per line
                 # as UTF-8 strings. X and Y are values, nominally between 0 and 512
                 xs, ys = line.split(',')

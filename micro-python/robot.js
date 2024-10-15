@@ -39,7 +39,6 @@ function create_request(x, y) {
 
         distance = Math.sqrt((dX * dX) + (dY * dY));
         
-        document.body.innerHTML = distance;
         if (distance < 50) {
             return;
         }
