@@ -1,4 +1,4 @@
-screw_radius = 1.3;
+screw_radius = 1.4;
 
 function make_grip_profile(height, depth) =
     [

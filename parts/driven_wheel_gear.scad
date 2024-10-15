@@ -20,7 +20,7 @@ module driven_wheel_gear(
         shaft_radius = 5.5 / 2,
         shaft_flats = 4,
         width = 10,
-        axle_protrusion = 1,
+        axle_protrusion = 4,
         hub_thickness = 5,
     ) {
     difference() {
